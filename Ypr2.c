@@ -4,22 +4,23 @@
 #include <locale.h>
 
 void main(void) {
-    float x,y,z,s,r,l,a,o,m,c;
-    printf("Введите переменную x:");
-    scanf("%f",&x);
+    float x,y,z,s,r,l,a,o,m,c,p;
+	printf(" x:"); //Введите переменную
+	scanf("%f",&x);
 
-    printf("Введите переменную y:");
+    printf(" y:");
     scanf("%f",&y);
     
-    printf("Введите переменную z:");
+    printf(" z:");
     scanf("%f",&z);
 
     a = fabs(x - y);
-    o = (x + 3 * a + x * x);
-    s = (a * z  + x * x );
+    p = pow(x,2);
+    o = (x + 3 * a + p);
+    s = (a * z  + p );
     c = (o / s);
     m = 0.25 * acos(x);
-    l = 5 * 1 / atan(x);
+    l = 5 * atan(x);
     r = (l -  m * c );
     printf("%0.4f",r);
 }
